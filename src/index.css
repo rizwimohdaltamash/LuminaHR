@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a;
+}
+
+/* Spinner animation used in List.jsx */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Leaflet popup text fix */
+.leaflet-popup-content {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Responsive Fixes Override for Inline Styles */
+@media (max-width: 640px) {
+    .details-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .photo-actions {
+        flex-direction: column !important;
+    }
+
+    .photo-actions>button,
+    .photo-actions>div,
+    .camera-actions {
+        flex-direction: column !important;
+    }
+
+    .camera-actions>button {
+        width: 100% !important;
+    }
+
+    .navbar {
+        flex-direction: column !important;
+        padding: 16px !important;
+        gap: 0 !important;
+        align-items: flex-start !important;
+    }
+
+    .mobile-menu-btn {
+        display: block !important;
+    }
+
+    .navbar-title {
+        display: none !important;
+        /* Hide page title on mobile to save space */
+    }
+
+    .navbar-links {
+        display: none !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 8px !important;
+        padding-top: 16px !important;
+    }
+
+    .navbar-links.open {
+        display: flex !important;
+    }
+
+    .navbar-link {
+        width: 100% !important;
+        text-align: left !important;
+        padding: 12px 16px !important;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)) !important;
+    }
+
+    .stats-row {
+        flex-direction: column !important;
+    }
+
+    .stats-row>div {
+        width: 100% !important;
+    }
+
+    .chart-card {
+        padding: 16px !important;
+    }
+
+    .chart-table {
+        overflow-x: auto !important;
+    }
+}
